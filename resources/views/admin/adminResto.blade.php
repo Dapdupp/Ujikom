@@ -18,6 +18,16 @@
                 class="px-5 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition shadow">
                 + Tambah Produk
             </a>
+            <a href="{{ route('logout') }}"
+           onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+           class="px-4 py-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition shadow">
+            Logout
+        </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="GET" class="hidden">
+            @csrf
+        </form>
+
         </div>
 
         @if (session('success'))
@@ -33,6 +43,7 @@
                         <th class="px-4 py-2 text-left">No</th>
                         <th class="px-4 py-2 text-left">ID Produk</th>
                         <th class="px-4 py-2 text-left">Nama Produk</th>
+                        <th class="px-4 py-2 text-left">Harga</th>
                         <th class="px-4 py-2 text-left">Gambar</th>
                         <th class="px-4 py-2 text-left">Status</th>
                         <th class="px-4 py-2 text-left">Aksi</th>
@@ -44,8 +55,9 @@
                         <td class="px-4 py-2">{{ $loop->iteration }}</td>
                         <td class="px-4 py-2">{{ $produk->id_produk }}</td>
                         <td class="px-4 py-2">{{ $produk->nm_produk }}</td>
+                        <td class="px-4 py-2">{{ $produk->harga }}</td>
                         <td class="px-4 py-2">
-                            <img src="{{ asset('storage/' . $produk->gambar) }}"
+                            <img src="{{ asset('storage/' . $produk->url_gambar) }}"
                                 class="w-16 h-16 object-cover rounded" alt="gambar produk">
                         </td>
                         <td class="px-4 py-2">{{ $produk->status }}</td>

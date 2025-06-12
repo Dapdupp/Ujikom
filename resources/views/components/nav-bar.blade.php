@@ -19,7 +19,6 @@
         <div class="hidden sm:flex space-x-6 font-medium text-gray-600">
             <a href="{{ url('pengunjung/index') }}" class="hover:text-gray-900 transition">Home</a>
             <a href="{{ url('pengunjung/produk') }}" class="hover:text-gray-900 transition">Produk</a>
-            <a href="{{ url('pengunjung/pemesanan') }}" class="hover:text-gray-900 transition">Pemesanan</a>
             <a href="{{ url('https://wa.me/6281320501381') }}" class="hover:text-gray-900 transition">Kontak</a>
         </div>
     </nav>
@@ -28,7 +27,6 @@
     <div id="navLinks" class="sm:hidden hidden px-4 pb-4 space-y-2 bg-white border-t border-gray-200">
         <a href="{{ url('pengunjung/index') }}" class="hover:text-gray-900 transition block">Home</a>
         <a href="{{ url('pengunjung/produk') }}" class="block text-gray-700 hover:text-gray-900">Produk</a>
-        <a href="{{ url('pengunjung/pemesanan') }}" class="block text-gray-700 hover:text-gray-900">Pemesanan</a>
         <a href="{{ url('https://wa.me/6281320501381') }}" class="block text-gray-700 hover:text-gray-900">Kontak</a>
     </div>
 

@@ -32,6 +32,14 @@
                 <p class="text-sm text-red-500 mt-1">{{ $message }}</p>
             @enderror
         </div>
+        <div class="mb-4">
+            <label for="harga" class="block font-medium text-orange-700">Harga</label>
+            <input type="text" name="harga" value="{{ old('nm_produk') }}" required
+                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500">
+            @error('harga')
+                <p class="text-sm text-red-500 mt-1">{{ $message }}</p>
+            @enderror
+        </div>
 
         <div class="mb-4">
             <label for="url_gambar" class="block font-medium text-orange-700">Gambar Produk</label>
